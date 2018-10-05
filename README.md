@@ -41,11 +41,16 @@ djangoproject
 ```
 ## How to make URLs with the path() function: (This is inside the urls.py)
 ```python
+from django.urls import path
+from . import views
+
 urlpatterns = [
  path('route1/', views.route1_name, name="route1_name"),
  path('route2/<string_variable>', views.route2_name, name="route2_name"),
  path('route3/<int:variable_name>', views.route3_name, name="route3_name"),
 ]
+
+# The first route is empty since it is the root.
 ```
 ## How to make a view function:
 ```python
@@ -59,4 +64,16 @@ urlpatterns = [
   return render(request, 'template3.html', {'data': variable_name})
 ```
 
+### Then Create a templates and make a base.html
+- In the body 
+{% block content %}
+{% endblock %}
 
+### Django folder urls.py
+```
+from django.urls import path, include
+
+urlpatterns = [
+  path('', include('main_app.urls')),
+]
+```
