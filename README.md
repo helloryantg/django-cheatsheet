@@ -77,3 +77,17 @@ urlpatterns = [
   path('', include('main_app.urls')),
 ]
 ```
+
+## Static files
+in the base.html
+```
+{% load staticfiles %}
+
+In the heading:
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+```
+
+
+
+
