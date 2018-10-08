@@ -91,6 +91,41 @@ In the heading:
 
 ```
 
+## Create a PostgreSQL Database
+```
+createdb cats
+```
+### Update settings.py to use PostgreSQL
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': ('cats'),
+    }
+}
+```
 
+## How to make migrations
+```
+python3 manage.py makemigrations
+```
+* Use the above after making the postgresql database
+```
+python3 manage.py makemigrate
+```
+
+## How to open databases
+* Use Postico to open
+
+
+## How to test CRUD in python interactive shell
+```
+python3 manage.py shell
+```
+
+## To see all our objects:
+```
+Cat.objects.all()
+```
 
 
