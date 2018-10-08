@@ -130,6 +130,7 @@ python3 manage.py makemigrate
 ## How to test CRUD in python interactive shell
 ```
 python3 manage.py shell
+from main_app.models import Cat
 ```
 
 ## To see all our objects:
