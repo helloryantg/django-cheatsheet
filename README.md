@@ -39,6 +39,9 @@ djangoproject
  |
  |- manage.py: Let's us manage everything about our project
 ```
+## Make sure you are in the correct version of Python:
+* Python 3.7
+
 ## How to make URLs with the path() function: (This is inside the urls.py)
 ```python
 from django.urls import path
