@@ -164,4 +164,9 @@ Cat.objects.all()
     * import Model
  * now go make the templates
 
+## User Create Form
+* In signup_view(request):
+ * form = UserCreateForm()
+
+## After starting up Visual Studio Code
 
