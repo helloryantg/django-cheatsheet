@@ -18,6 +18,10 @@ ctrl + C
 ```bash
 python3 manage.py startapp main_app
 ```
+## Make the repo for the project
+* Go to folder containing project
+* Go to github and create a new repository - do not initiliaze
+* Follow instructions - make sure to do `git add -A` before committing
 
 ## Django Directory Structure
 ```
@@ -137,5 +141,27 @@ from main_app.models import Cat
 ```
 Cat.objects.all()
 ```
+
+## How to create a database
+* dropdb cats
+* createdb cats
+* python3 manage.py migrate
+* python3 manage.py createsuperuser
+
+## Whenever you change a model
+* Whenever you change a model
+ * Add new model to the models.py
+ * make sure to add the __str__
+ * makemigration
+ * migrate
+ * go to admin.py
+    * import the Model title
+    * admin.site.register(ModelTitle)
+ * go to urls.py
+    * add new paths
+ * go to views.py
+    * add the methods from the paths (Create, Update, Delete)
+    * import Model
+ * now go make the templates
 
 
